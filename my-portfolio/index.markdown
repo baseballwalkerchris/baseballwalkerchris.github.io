@@ -16,6 +16,7 @@ layout: home
   <p>🟢 Open to work!</p>
 
 
+
   <div class="profile-image">
     <img src="{{ site.baseurl }}/assets/images/profilepic.jpg" />
   </div>
