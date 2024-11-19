@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+# Here's a little more about me!
 
 <div class="personal-image">
   <img src="{{ site.baseurl }}/assets/images/personalpic.jpg" alt="Personal Picture">

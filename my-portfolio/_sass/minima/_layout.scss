@@ -267,15 +267,94 @@
   border-radius: 8px;      
 }
 
+// About page
+
 .personal-image {
-  float: left;          /* Float the image to the left */
-  margin-right: 20px;    /* Space between image and text */
-  margin-bottom: 10px;   /* Space between image and the following text */
-  width: 400px;          /* Adjust width of the image */
+  float: left;          
+  margin-right: 20px;   
+  margin-bottom: 10px;   
+  width: 400px;         
 }
 
 .personal-image img {
-  width: 100%;           /* Make the image fill its container */
-  height: auto;          /* Keep the image's aspect ratio */
-  border-radius: 4px;    /* Optional: round the corners of the image */
+  width: 100%;           
+  height: auto;         
+  border-radius: 4px;   
+}
+
+// Timeline page
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ddd;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item.left {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.right {
+  flex-direction: row;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  width: 45%;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+// Hover effect
+.timeline-image img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  // filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.6)); 
+}
+
+.timeline-item.left .timeline-content {
+  text-align: right;
+}
+
+.timeline-item.left:before {
+  transform: translateX(calc(-50% - 20px)); 
+}
+
+.timeline-item.right:before {
+  transform: translateX(calc(-50% + 20px));
 }
