@@ -282,6 +282,12 @@
   border-radius: 4px;   
 }
 
+#about-me {
+  margin-top: 50px; /* Push the section down */
+  clear: both;      /* Ensure it doesn't overlap floated elements */
+  padding-top: 20px; /* Optional padding */
+}
+
 // Timeline page
 
 .timeline {
@@ -376,3 +382,6 @@
   background-color: #005bb5;
 }
 
+html {
+  scroll-behavior: smooth;
+}

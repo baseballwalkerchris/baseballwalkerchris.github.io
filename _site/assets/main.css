@@ -24,6 +24,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  zoom: 1.2;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -470,6 +472,12 @@ table td {
   border-radius: 4px;
 }
 
+#about-me {
+  margin-top: 50px; /* Push the section down */
+  clear: both; /* Ensure it doesn't overlap floated elements */
+  padding-top: 20px; /* Optional padding */
+}
+
 .timeline {
   position: relative;
   margin: 20px 0;
@@ -558,6 +566,10 @@ table td {
 
 .resume-button:hover {
   background-color: #005bb5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /**
