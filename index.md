@@ -30,19 +30,26 @@ layout: home
 <!-- Profile Section -->
 <div class="full-width-profile-background">
   <div class="centered-content">
-<div id="profile-section" class="section">
-  <img src="/assets/images/profilepic.jpg" alt="Profile Picture" class="profile-image">
-  <div class="profile-text">
-    <h1>Christopher Cheng 👋</h1>
-    <p>
-      I'm a senior studying Computer Science at Cornell University, aspiring to be a software engineer
-      that writes clean, optimized, and efficient code.
-    </p>
-    <p>📍 Ithaca, New York</p>
-    <p>🟢 Open to work!</p>
+    <div id="profile-section" class="section">
+      <img src="/assets/images/profilepic.jpg" alt="Profile Picture" class="profile-image">
+      <div class="profile-text">
+        <h1 id="profile-header" >Christopher Cheng 👋</h1>
+        <!-- Pronunciation Button -->
+        <button id="name-button" onclick="document.getElementById('nameAudio').play()" 
+                style="">
+          🔊 Click me! 
+        </button>
+        <audio id="nameAudio" src="/assets/audio/your-name.mp3"></audio>
+
+        <p>
+          I'm a senior studying Computer Science at Cornell University, aspiring to be a software engineer
+          that writes clean, optimized, and efficient code.
+        </p>
+        <p>📍 Ithaca, New York</p>
+        <p>🟢 Open to work!</p>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
 
 <div class="full-width-about-me-background">
@@ -83,6 +90,18 @@ layout: home
   <div class="centered-content">
 <div id="timeline-section" class="section">
 <h2 id="timeline-header" style="text-align: center;">Timeline</h2>
+  <div class="timeline-item right">
+    <div class="timeline-content">
+      <h3>December 2024</h3>
+      <p>Designed and created an iOS cooking social media app meant to bring college students together through food</p>
+    </div>
+    <div class="timeline-image">
+      <video width="350" controls>
+        <source src="{{ site.baseurl }}/assets/images/LetEmCookDemo.mp4" type="video/mp4">
+        Your browser does not support this
+      </video>
+    </div>
+  </div>
 
   <div class="timeline-item left">
     <div class="timeline-content">
@@ -90,7 +109,7 @@ layout: home
       <p>Implemented an AI-powered journaling mobile application with the purpose of improving mental health for all, finalist at Big Red Hacks</p>
     </div>
     <div class="timeline-image">
-      <video width="300" controls>
+      <video width="350" controls>
         <source src="{{ site.baseurl }}/assets/images/UnspoolDemoFinal.mp4" type="video/mp4">
         Your browser does not support this
       </video>
