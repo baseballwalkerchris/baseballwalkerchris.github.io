@@ -340,23 +340,24 @@
 
 /* General Timeline Item Layout */
 .timeline-item {
-  display: flex; /* Use Flexbox for layout */
-  justify-content: space-between; /* Space between text and media */
-  align-items: center; /* Center content vertically */
-  background-color: #ffffff; /* White background */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #ffffff; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 20px;
-  margin: 20px auto; /* Center the box horizontally */
-  max-width: 900px; /* Set a maximum width */
-  width: 80%; /* Make it responsive */
+  margin: 20px auto; 
+  max-width: 900px; 
+  width: 80%; 
+  transition: transform 0.2s ease;
 }
 
-/* Alternate Positions: Text on Left, Image/Video on Right (Default) */
+
 .timeline-item .timeline-text {
   color: black;
   flex: 1;
-  padding: 0 20px; /* Add space between text and media */
+  padding: 0 20px; 
 }
 
 .timeline-item .timeline-text .timeline-position {
@@ -379,7 +380,7 @@
   border-radius: 8px;
 }
 
-/* Switch Layout for Even Timeline Items */
+
 .timeline-item:nth-child(even) {
   flex-direction: row-reverse; 
 }
@@ -390,6 +391,99 @@
 
 .timeline-item:nth-child(even) .timeline-media {
   padding-right: 20px;
+}
+
+.timeline-item:hover {
+  transform: scale(1.02); 
+}
+
+
+.timeline-item:hover {
+  transform: scale(1.02); 
+}
+
+
+.popup {
+  position: absolute;
+  top: 50%; 
+  left: calc(100% + 15px); 
+  transform: translateY(-50%);
+  width: 250px; 
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  visibility: hidden; 
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+}
+
+/* Show Popup on Hover */
+.timeline-item:hover .popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff; 
+}
+/* Skills Section Header */
+.popup h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+/* Individual Skill Box */
+.skill-box {
+  background-color: #007BFF; 
+  color: #fff; 
+  padding: 8px 12px;
+  border-radius: 20px; 
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* Soft Skill Box */
+.soft-skill-box {
+  background-color: #28A745; 
+  color: #fff;
+  padding: 8px 12px; 
+  border-radius: 20px; 
+  font-size: 12px; 
+  font-weight: bold; 
+  text-align: center;
+  white-space: nowrap; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects for Boxes */
+.skill-box:hover,
+.soft-skill-box:hover {
+  filter: brightness(0.9); 
+  cursor: pointer;
 }
 
 html {
