@@ -31,7 +31,7 @@ layout: home
 <div class="full-width-profile-background">
   <div class="centered-content">
     <div id="profile-section" class="section">
-      <img src="/assets/images/profilepic.jpg" alt="Profile Picture" class="profile-image">
+      <img src="{{ site.baseurl }}/assets/images/profilepic.jpg" alt="Profile Picture" class="profile-image">
       <div class="profile-text">
         <h1 id="profile-header" >Christopher Cheng 👋</h1>
         <!-- Pronunciation Button -->
@@ -39,7 +39,7 @@ layout: home
                 style="">
           🔊 Click me! 
         </button>
-        <audio id="nameAudio" src="/assets/audio/your-name.mp3"></audio>
+        <audio id="nameAudio" src="{{ site.baseurl }}/assets/videos/pronunciation.mp3"></audio>
 
         <p>
           I'm a senior studying Computer Science at Cornell University, aspiring to be a software engineer
@@ -57,7 +57,7 @@ layout: home
     <div id="about-me-section" class="section">
     <h2 id="about-me-header">Here's a little more about me!</h2>
       <div class="personal-image">
-        <img src="/assets/images/personalpic.jpg" alt="Personal Picture">
+        <img src="{{ site.baseurl }}/assets/images/personalpic.jpg" alt="Personal Picture">
       </div>
       <div class="about-me-text">
       <p>
@@ -87,30 +87,41 @@ layout: home
     <div id="timeline-section" class="section">
     <h2 id="timeline-header" style="text-align: center;">Timeline </h2>
       <div class="timeline-item">
-          <div class="timeline-text">
-            <h3>December 2024</h3>
-            <p>
-              Designed and created an iOS cooking social media app meant to bring college students together through food.
-            </p>
-          </div>
-          <div class="timeline-media">
-            <video controls>
-              <source src="{{ site.baseurl }}/assets/images/LetEmCookDemo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+        <div class="timeline-text">
+          <h3 class="timeline-title">SignSleuth</h3> 
+          <h3 class="timeline-date">December 2024</h3> 
+          <h4 class="timeline-position">Computer Vision Programmer</h4>
+        </div>
+        <div class="timeline-media">
+          <video controls>
+            <source src="{{ site.baseurl }}/assets/videos/SignSleuthDemoSnippet.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-text">
+          <h3 class="timeline-title">LetEmCook!</h3> 
+          <h3 class="timeline-date">December 2024</h3> 
+          <h4 class="timeline-position">Frontend iOS Programmer</h4>
+        </div>
+        <div class="timeline-media">
+          <video controls>
+            <source src="{{ site.baseurl }}/assets/videos/LetEmCookDemo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
   <div class="timeline-item">
     <div class="timeline-text">
-      <h3>October 2024</h3>
-      <p>
-        Implemented an AI-powered journaling mobile application with the purpose of improving mental health for all, finalist at Big Red Hacks.
-      </p>
+      <h3 class="timeline-title">Unspool</h3> 
+      <h3 class="timeline-date">October 2024</h3> 
+      <h4 class="timeline-position">Backend Programmer</h4>
     </div>
     <div class="timeline-media">
       <video controls>
-        <source src="{{ site.baseurl }}/assets/images/UnspoolDemoFinal.mp4" type="video/mp4" />
+        <source src="{{ site.baseurl }}/assets/videos/UnspoolDemoFinal.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -118,8 +129,20 @@ layout: home
 
   <div class="timeline-item">
     <div class="timeline-text">
-      <h3>September 2024</h3>
-      <p>Designed a biowearable and companion app for pregnant women with a history of drug use as part of the 2024 Pfizer Health Hackathon</p>
+      <h3 class="timeline-title">Composition</h3> 
+      <h3 class="timeline-date">September 2024</h3> 
+      <h4 class="timeline-position">Backend Programmer</h4>
+    </div>
+    <div class="timeline-media">
+      <img src="{{ site.baseurl }}/assets/images/compositionpic.jpg" alt="Composition" />
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-text">
+      <h3 class="timeline-title">Matria</h3> 
+      <h3 class="timeline-date">September 2024</h3> 
+      <h4 class="timeline-position">Market Researcher</h4>
     </div>
     <div class="timeline-media">
       <img src="{{ site.baseurl }}/assets/images/matripic.jpg" alt="Matria" />
@@ -128,28 +151,20 @@ layout: home
 
   <div class="timeline-item">
     <div class="timeline-text">
-    <h3>June 2024 — August 2024 </h3>
-    <p>Interned at Amazon Web Services, focusing on improving request routing strategies for AWS Rekognition</p>
+      <h3 class="timeline-title">Amazon Web Services</h3> 
+      <h3 class="timeline-date">June 2024 — August 2024</h3> 
+      <h4 class="timeline-position">Software Dev. Engineer Intern</h4>
     </div>
     <div class="timeline-media">
       <img src="{{ site.baseurl }}/assets/images/awsday1.jpg" alt="AWS">
     </div>
   </div>
 
-  <div class="timeline-item">
-      <div class="timeline-text">
-      <h3>October 2023</h3>
-      <p>Created a web application called Youtrition that leverages computer vision to revitalize users' diets</p>
-      </div>
-    <div class="timeline-media">
-      <img src="{{ site.baseurl }}/assets/images/youtritionpic.jpg" alt="Youtrition" />
-    </div>
-  </div>
-
  <div class="timeline-item">
-     <div class="timeline-text">
-      <h3>June 2023 — Dec. 2023</h3>
-      <p>Interned at BAE Systems, developed and tested a Python algorithm to streamline performance of scheduled database queries, improving accessibility of data </p>
+    <div class="timeline-text">
+      <h3 class="timeline-title">BAE Systems</h3> 
+      <h3 class="timeline-date">June 2023 — Dec. 2023</h3> 
+      <h4 class="timeline-position">Technical Intern</h4>
     </div>
     <div class="timeline-media">
       <img src="{{ site.baseurl }}/assets/images/baepic.jpg" alt="BAE" />
@@ -158,12 +173,25 @@ layout: home
 
   <div class="timeline-item">
     <div class="timeline-text">
-      <h3>October 2022 — Dec. 2023</h3>
-      <p>Coded sailboat search algorithm using convolutional neural network as part of Cornell University Autonomous Sailbot team</p>
+      <h3 class="timeline-title">Cornell University Autonomous Sailboat Team</h3> 
+      <h3 class="timeline-date">Oct. 2022 — Dec. 2023</h3> 
+      <h4 class="timeline-position">Navigation Subteam Member</h4>
     </div>
     <div class="timeline-media">
       <img src="{{ site.baseurl }}/assets/images/cusailpic.jpg
       " alt="CUSail" />
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-text">
+      <h3 class="timeline-title">Cornell Concrete Canoe</h3> 
+      <h3 class="timeline-date">Oct. 2021 — May. 2022</h3> 
+      <h4 class="timeline-position">Mix Subteam Member</h4>
+    </div>
+    <div class="timeline-media">
+      <img src="{{ site.baseurl }}/assets/images/concretecanoe.jpg
+      " alt="Concrete Canoe" />
     </div>
   </div>
 
