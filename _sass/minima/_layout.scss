@@ -1,14 +1,46 @@
 /**
  * Site header
  */
-.site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
-  background-color: #f9eee3;
+ .site-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 5px solid #333; 
+  border-bottom: 1px solid #ddd; 
+  background-color: #f9eee3; 
+  padding: 10px 20px; 
+}
 
-  // Positioning context for the mobile navigation icon
-  position: relative;
+.site-title {
+  font-size: 1.625rem; 
+  font-weight: 300;
+  margin-right: 120px; 
+}
+
+.site-nav {
+  display: flex; 
+  gap: 20px; 
+}
+
+.site-nav .page-link {
+  color: #333; 
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.resume-button {
+  background-color: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  height: 80px;
+}
+
+.resume-button:hover {
+  background-color: #005bb5;
 }
 
 .site-title {
@@ -187,33 +219,59 @@
   @include relative-font-size(2);
 }
 
+// Profile page
+
 .profile-image {
-  float: right; /* Float image to the right */
-  margin-left: 20px; /* Add space to the left of the image */
-  margin-bottom: 20px; /* Add space below the image */
-  width: 200px; /* Control the image width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: Rounded corners */
+  float: right; 
+  margin-left: 20px; 
+  margin-bottom: 20px; 
+  width: 200px; 
+  height: auto; 
+  border-radius: 8px;
+}
+
+#profile-header {
+  margin-bottom: 0;
 }
 
 .profile-section {
-  overflow: hidden; /* Ensure content wraps around floated image */
+  overflow: hidden; 
 }
 
 .profile-text {
   font-size: 16px;
   line-height: 1.6;
-  margin-top: 10px; /* Adjust spacing between text and container */
+  margin-top: 10px; 
 }
 
+#name-button {
+  margin-top: -10px; 
+  margin-bottom: 30px;
+  padding: 8px 12px; 
+  font-size: 14px; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: none; 
+  border-radius: 5px; 
+  background-color: #ADD8E6; 
+  color: black; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+
+}
+
+#name-button:hover {
+  background-color: #87CEEB; 
+  color: white; 
+  transform: scale(1.05); 
+}
 
 
 // About page
 
 #about-me {
-  margin-top: 200px; /* Push the section down */
-  clear: both;      /* Ensure it doesn't overlap floated elements */
-  padding-top: 20px; /* Optional padding */
+  margin-top: 200px; 
+  clear: both;     
+  padding-top: 20px;
 }
 
 #about-me-header {
@@ -222,7 +280,7 @@
 }
 
 .personal-image {
-  text-align: center; /* Center the image within its container */
+  text-align: center; 
 }
 
 .personal-image img {
@@ -235,10 +293,9 @@
 .about-me-text {
   margin-top: 40px;
   font-size: 16px;
-  line-height: 1.6;/* Adjust spacing between text and container */
+  line-height: 1.6;
 }
 
-// Timeline page
 
 /* Timeline Section */
 
@@ -264,139 +321,109 @@
   transform: translateX(-50%);
 }
 
+/* General Timeline Item Layout */
 .timeline-item {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between text and media */
+  align-items: center; /* Center content vertically */
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  margin: 20px auto; /* Center the box horizontally */
+  max-width: 900px; /* Set a maximum width */
+  width: 80%; /* Make it responsive */
+}
+
+/* Alternate Positions: Text on Left, Image/Video on Right (Default) */
+.timeline-item .timeline-text {
+  color: black;
+  flex: 1;
+  padding: 0 20px; /* Add space between text and media */
+}
+
+.timeline-item .timeline-text .timeline-position {
+  font-style: italic;
+}
+
+.timeline-item .timeline-text h3 {
+  font-weight: bold
+}
+
+.timeline-item .timeline-media {
+  flex: 1;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  position: relative;
-  width: 100%;
-}
-
-.timeline-item.left {
-  flex-direction: row-reverse;
-}
-
-.timeline-item.right {
-  flex-direction: row;
-}
-
-.timeline-content {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  width: 45%;
-  color: #000;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-image {
-  width: 45%;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.timeline-image img {
+.timeline-media img,
+.timeline-media video {
   max-width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-// Hover effect
-.timeline-image img:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
-  // filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.6)); 
+/* Switch Layout for Even Timeline Items */
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse; 
 }
 
-.timeline-item.left .timeline-content {
-  text-align: right;
+.timeline-item:nth-child(even) .timeline-text {
+  padding: 0 0 0 20px; 
 }
 
-.timeline-item.left:before {
-  transform: translateX(calc(-50% - 20px)); 
-}
-
-.timeline-item.right:before {
-  transform: translateX(calc(-50% + 20px));
-}
-
-.resume-button {
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
-  padding: 10px 15px;
-  margin-top: 6px;
-  margin-left: 200px; 
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.resume-button:hover {
-  background-color: #005bb5;
+.timeline-item:nth-child(even) .timeline-media {
+  padding-right: 20px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* General section styling */
 .section {
-  padding: 40px 20px; /* Add space inside each section */
-  margin: 0; /* Remove default margins */
+  padding: 40px 20px;
+  margin: 0; 
 }
 
-/* General section styling */
 .section {
-  padding: 40px 20px; /* Add space inside each section */
-  margin: 0; /* Remove default margins */
+  padding: 40px 20px; 
+  margin: 0; 
 }
 
-/* Add spacing below the sections */
 #about-me-section, #timeline-section {
-  margin-top: 20px; /* Add space between sections */
+  margin-top: 20px; 
 }
 
-/* Optional: Style headings for clarity */
 .section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Full-width background container */
 .full-width-profile-background {
-  width: 100vw; /* Force full viewport width */
-  margin-left: calc(-50vw + 50%); /* Offset for centered content */
-  background-color: #5B7C99; /* Light blue background */
- /* Vertical spacing */
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
-}
-
-/* Full-width background container */
-.full-width-about-me-background {
-  width: 100vw; /* Force full viewport width */
-  margin-left: calc(-50vw + 50%); /* Offset for centered content */
-  background-color: #5B7C99; /* Light blue background */
-  padding: 40px 0; /* Vertical spacing */
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
-}
-
-/* Full-width background container */
-.full-width-timeline-background {
-  width: 100vw; /* Force full viewport width */
-  margin-left: calc(-50vw + 50%); /* Offset for centered content */
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%);
   background-color: #5B7C99; 
-  padding: 40px 0; /* Vertical spacing */
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
+  box-sizing: border-box; 
+}
+
+.full-width-about-me-background {
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+  background-color: #5B7C99; 
+  padding: 40px 0; 
+  box-sizing: border-box; 
+}
+
+.full-width-timeline-background {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); 
+  background-color: #5B7C99; 
+  padding: 40px 0;
+  box-sizing: border-box; 
 }
 
 .section {
-  max-width: 800px; /* Keeps content readable on large screens */
+  max-width: 800px; 
   margin: 0 auto; 
 }
 
