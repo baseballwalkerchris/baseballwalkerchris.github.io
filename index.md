@@ -33,7 +33,7 @@ layout: home
     <div id="profile-section" class="section">
       <img src="{{ site.baseurl }}/assets/images/profilepic.jpg" alt="Profile Picture" class="profile-image">
       <div class="profile-text">
-        <h1 id="profile-header" >Christopher Cheng 👋</h1>
+  <h1 id="profile-header">Christopher Cheng <span class="hand-icon">👋</span></h1>
         <!-- Pronunciation Button -->
         <button id="name-button" onclick="document.getElementById('nameAudio').play()" 
                 style="">

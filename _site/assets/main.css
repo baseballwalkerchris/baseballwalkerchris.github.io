@@ -428,6 +428,33 @@ table td {
   margin-bottom: 0;
 }
 
+/* Add waving animation to the hand icon */
+.hand-icon {
+  display: inline-block; /* Ensure it works inline */
+  transition: transform 0.2s ease; /* Smooth transition for other transformations */
+}
+
+.hand-icon:hover {
+  animation: wave 0.5s ease-in-out infinite; /* Apply animation on hover */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  } /* Neutral position */
+  25% {
+    transform: rotate(-15deg);
+  } /* Tilt to the left */
+  50% {
+    transform: rotate(0deg);
+  } /* Back to neutral */
+  75% {
+    transform: rotate(15deg);
+  } /* Tilt to the right */
+  100% {
+    transform: rotate(0deg);
+  } /* Return to neutral */
+}
 .profile-section {
   overflow: hidden;
 }
