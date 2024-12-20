@@ -173,6 +173,17 @@ layout: home
 
   <div class="timeline-item">
     <div class="timeline-text">
+      <h3 class="timeline-title">ChessMon</h3> 
+      <h3 class="timeline-date">May 2023</h3> 
+      <h4 class="timeline-position">Backend OCaml Programmer</h4>
+    </div>
+    <div class="timeline-media">
+      <img src="{{ site.baseurl }}/assets/images/chessmon.gif" alt="Chessmon" />
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-text">
       <h3 class="timeline-title">Cornell University Autonomous Sailboat Team</h3> 
       <h3 class="timeline-date">Oct. 2022 — Dec. 2023</h3> 
       <h4 class="timeline-position">Navigation Subteam Member</h4>
